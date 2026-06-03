@@ -502,214 +502,6 @@ experiance SECTION
 
 .luxury-stats {
   position: relative;
-  min-height: 440px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #061827;
-  padding: 110px 20px;
-}
-
-.luxury-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 1;
-  transform: scale(1.04);
-}
-
-.luxury-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 18, 35, 0.94),
-      rgba(4, 30, 55, 0.76),
-      rgba(3, 18, 35, 0.94)
-    ),
-    radial-gradient(circle at 50% 45%, rgba(11, 134, 189, 0.2), transparent 45%);
-}
-
-.luxury-outline {
-  position: absolute;
-  bottom: 7%;
-  left: 0;
-  font-size: clamp(80px, 15vw, 230px);
-  font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(216, 161, 82, 0.16);
-  letter-spacing: 10px;
-  white-space: nowrap;
-  z-index: 1;
-  animation: outlineMove 22s linear infinite alternate;
-  will-change: transform;
-}
-
-.luxury-content {
-  position: relative;
-  z-index: 3;
-  width: min(1200px, 92%);
-}
-
-.luxury-heading {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.luxury-heading span {
-  color: #d8a152;
-  font-size: 13px;
-  letter-spacing: 7px;
-  font-weight: 700;
-}
-
-.luxury-heading h2 {
-  max-width: 760px;
-  margin: 22px auto 0;
-  color: #fff;
-  font-size: clamp(34px, 4vw, 58px);
-  line-height: 1.15;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-}
-
-.luxury-stats-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 90px;
-}
-
-.luxury-stat {
-  position: relative;
-  flex: 1;
-  text-align: center;
-  padding: 20px;
-}
-
-.luxury-stat:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: -45px;
-  top: 15%;
-  width: 1px;
-  height: 70%;
-  background: linear-gradient(
-    transparent,
-    rgba(216, 161, 82, 0.7),
-    transparent
-  );
-}
-
-.luxury-stat i {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  font-size: 36px;
-  color: #d8a152;
-  border: 1px solid rgba(216, 161, 82, 0.3);
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(10px);
-  margin-bottom: 28px;
-  transition: 0.4s ease;
-}
-
-.luxury-stat:hover i {
-  transform: translateY(-8px);
-  border-color: #d8a152;
-  box-shadow: 0 0 35px rgba(216, 161, 82, 0.28);
-}
-
-.luxury-stat h3 {
-  margin: 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(60px, 7vw, 95px);
-  line-height: 1;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.luxury-stat span {
-  display: block;
-  width: 65px;
-  height: 2px;
-  background: #d8a152;
-  margin: 22px auto 18px;
-}
-
-.luxury-stat p {
-  margin: 0;
-  color: #d8a152;
-  font-size: 14px;
-  line-height: 1.8;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .luxury-stats {
-    min-height: auto;
-    padding: 80px 20px;
-  }
-
-  .luxury-heading {
-    margin-bottom: 60px;
-  }
-
-  .luxury-stats-wrap {
-    flex-direction: column;
-    gap: 60px;
-  }
-
-  .luxury-stat {
-    width: 100%;
-  }
-
-  .luxury-stat:not(:last-child)::after {
-    display: none;
-  }
-
-  .luxury-stat h3 {
-    font-size: 60px;
-  }
-
-  .luxury-stat i {
-    width: 75px;
-    height: 75px;
-    font-size: 30px;
-  }
-
-  .luxury-stat p {
-    font-size: 13px;
-    letter-spacing: 3px;
-  }
-
-  .luxury-outline {
-    font-size: 75px;
-    bottom: 3%;
-  }
-}
-@keyframes outlineMove {
-  from {
-    transform: translateX(8%);
-  }
-  to {
-    transform: translateX(-4%);
-  }
-}
-
-.luxury-fade {
-  opacity: 0;
-  transform: translateY(35px);.luxury-stats {
-  position: relative;
   min-height: 520px;
   overflow: hidden;
   display: flex;
@@ -725,8 +517,6 @@ experiance SECTION
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 1;
-  transform: scale(1.06);
   animation: bgSlowZoom 12s ease-in-out infinite alternate;
 }
 
@@ -736,11 +526,11 @@ experiance SECTION
   background:
     linear-gradient(
       90deg,
-      rgba(3, 18, 35, 0.96),
-      rgba(4, 30, 55, 0.76),
-      rgba(3, 18, 35, 0.96)
+      rgba(3, 18, 35, 0.95),
+      rgba(4, 30, 55, 0.75),
+      rgba(3, 18, 35, 0.95)
     ),
-    radial-gradient(circle at 50% 45%, rgba(11, 134, 189, 0.24), transparent 45%);
+    radial-gradient(circle at 50% 45%, rgba(11, 134, 189, 0.2), transparent 45%);
 }
 
 .luxury-outline {
@@ -755,7 +545,6 @@ experiance SECTION
   white-space: nowrap;
   z-index: 1;
   animation: outlineMove 22s linear infinite alternate;
-  will-change: transform;
 }
 
 .luxury-content {
@@ -777,73 +566,41 @@ experiance SECTION
   text-transform: uppercase;
 }
 
-.luxury-heading h2 {
-  max-width: 760px;
-  margin: 22px auto 0;
-  color: #fff;
-  font-size: clamp(34px, 4vw, 58px);
-  line-height: 1.15;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-}
-
 .luxury-stats-wrap {
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 90px;
 }
 
 .luxury-stat {
-  position: relative;
   flex: 1;
   text-align: center;
-  padding: 24px;
-}
-
-.luxury-stat:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: -45px;
-  top: 15%;
-  width: 1px;
-  height: 70%;
-  background: linear-gradient(
-    transparent,
-    rgba(216, 161, 82, 0.7),
-    transparent
-  );
+  padding: 20px;
 }
 
 .luxury-stat i {
+  width: 90px;
+  height: 90px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 92px;
-  height: 92px;
   border-radius: 50%;
   font-size: 36px;
   color: #d8a152;
-  border: 1px solid rgba(216, 161, 82, 0.3);
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(10px);
-  margin-bottom: 28px;
-  transition: 0.45s ease;
+  border: 1px solid rgba(216,161,82,.3);
+  background: rgba(255,255,255,.04);
+  margin-bottom: 25px;
+  transition: .4s;
 }
 
 .luxury-stat:hover i {
-  transform: translateY(-8px) scale(1.04);
-  border-color: #d8a152;
-  box-shadow: 0 0 35px rgba(216, 161, 82, 0.28);
+  transform: translateY(-8px);
 }
 
 .luxury-stat h3 {
   margin: 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(60px, 7vw, 95px);
-  line-height: 1;
-  font-weight: 500;
-  color: #ffffff;
+  font-size: clamp(60px,7vw,95px);
+  color: #fff;
 }
 
 .luxury-stat span {
@@ -851,162 +608,54 @@ experiance SECTION
   width: 65px;
   height: 2px;
   background: #d8a152;
-  margin: 22px auto 18px;
+  margin: 22px auto;
 }
 
 .luxury-stat p {
-  margin: 0;
   color: #d8a152;
-  font-size: 14px;
-  line-height: 1.8;
   letter-spacing: 4px;
   text-transform: uppercase;
-  font-weight: 500;
 }
 
-/* Scroll animation */
 .luxury-fade {
   opacity: 0;
-  transform: translateY(45px);
-  transition: 0.85s ease;
-}
-
-.animate-stats .luxury-fade {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.luxury-stat i {
-  opacity: 0;
-  transform: scale(0.78);
-}
-
-.animate-stats .luxury-stat i {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.animate-stats .luxury-stat h3 {
-  animation: numberPop 0.7s ease forwards;
-}
-
-/* Keyframes */
-@keyframes outlineMove {
-  from {
-    transform: translateX(8%);
-  }
-  to {
-    transform: translateX(-4%);
-  }
-}
-
-@keyframes bgSlowZoom {
-  from {
-    transform: scale(1.04);
-  }
-  to {
-    transform: scale(1.12);
-  }
-}
-
-@keyframes numberPop {
-  0% {
-    transform: scale(0.85);
-    opacity: 0;
-  }
-  70% {
-    transform: scale(1.08);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Tablet */
-@media (max-width: 900px) {
-  .luxury-stats {
-    min-height: auto;
-    padding: 90px 20px;
-  }
-
-  .luxury-heading {
-    margin-bottom: 60px;
-  }
-
-  .luxury-stats-wrap {
-    flex-direction: column;
-    gap: 55px;
-  }
-
-  .luxury-stat {
-    width: 100%;
-  }
-
-  .luxury-stat:not(:last-child)::after {
-    display: none;
-  }
-
-  .luxury-stat h3 {
-    font-size: 62px;
-  }
-
-  .luxury-outline {
-    font-size: 90px;
-    bottom: 3%;
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .luxury-stats {
-    padding: 75px 18px;
-  }
-
-  .luxury-heading {
-    margin-bottom: 50px;
-  }
-
-  .luxury-heading span {
-    font-size: 11px;
-    letter-spacing: 4px;
-  }
-
-  .luxury-stats-wrap {
-    gap: 45px;
-  }
-
-  .luxury-stat {
-    padding: 16px;
-  }
-
-  .luxury-stat i {
-    width: 76px;
-    height: 76px;
-    font-size: 30px;
-  }
-
-  .luxury-stat h3 {
-    font-size: 58px;
-  }
-
-  .luxury-stat p {
-    font-size: 12px;
-    letter-spacing: 3px;
-  }
-
-  .luxury-outline {
-    font-size: 72px;
-    bottom: 2%;
-  }
-}
-  animation: luxuryFadeUp 0.5s ease forwards;
+  transform: translateY(35px);
+  animation: luxuryFadeUp .8s ease forwards;
 }
 
 @keyframes luxuryFadeUp {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes outlineMove {
+  from { transform: translateX(8%); }
+  to { transform: translateX(-4%); }
+}
+
+@keyframes bgSlowZoom {
+  from { transform: scale(1.04); }
+  to { transform: scale(1.12); }
+}
+
+@media (max-width:768px) {
+  .luxury-stats {
+    padding: 80px 20px;
+  }
+
+  .luxury-stats-wrap {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .luxury-outline {
+    font-size: 75px;
+  }
+
+  .luxury-stat h3 {
+    font-size: 60px;
   }
 }
 
