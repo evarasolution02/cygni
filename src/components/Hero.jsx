@@ -1,7 +1,7 @@
 import React from "react";
+import heroVideo from "../assets/hero.mp4";
 
 const Hero = () => {
-
   const scrollDown = () => {
     window.scrollTo({
       top: window.innerHeight,
@@ -11,22 +11,22 @@ const Hero = () => {
 
   return (
     <section className="hero" id="hero">
+      <video
+        className="hero-video"
+        src={heroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
 
-      {/* VIDEO */}
-      <video autoPlay muted loop playsInline className="hero-video">
-        <source src="/src/assets/hero.mp4" type="video/mp4" />
-      </video>
-
-      {/* LIGHT OVERLAY */}
       <div className="hero-overlay"></div>
 
-      {/* SCROLL INDICATOR */}
       <div className="scroll-indicator" onClick={scrollDown}>
         <div className="mouse">
           <div className="dot"></div>
         </div>
       </div>
-
     </section>
   );
 };
