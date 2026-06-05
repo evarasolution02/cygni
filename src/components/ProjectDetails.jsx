@@ -81,7 +81,7 @@ const projects = {
   "cygni-pride": {
     title: "CYGNI PRIDE",
     category: "Residential",
-    location: "Tragad, Surat",
+    location: "Mota Varachha, Surat",
     status: "Premium Residential Project",
     image: pride,
     brochure: "/brochures/cygni-pride.pdf",
@@ -111,7 +111,7 @@ const projects = {
       { title: "Double Basement Parking", icon: ParkingCircle },
     ],
     floorPlans: [f1, f2],
-    address: "Tragad, Surat, Gujarat, India",
+    address: "Mota Varachha, Surat, Gujarat, India",
     phone: "+91 98765 43210",
     mapLink:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.3707317936464!2d72.88737947503802!3d21.256787780450228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0490057531115%3A0x64fa48ca9c04ad51!2sCYGNI%20PRIDE!5e0!3m2!1sen!2sin!4v1780472755007!5m2!1sen!2sin",
@@ -120,7 +120,7 @@ const projects = {
   "cygni-seasons": {
     title: "CYGNI SEASONS",
     category: "Residential",
-    location: "Surat",
+    location: "Mota Varachha, Surat",
     status: "Premium Residential & Retail Project",
     image: seasons,
     brochure: "/brochures/cygni-seasons.pdf",
@@ -143,7 +143,7 @@ const projects = {
       { title: "G + Basement Parking", icon: ParkingCircle },
     ],
     floorPlans: [sf1],
-    address: "Surat, Gujarat, India",
+    address: "Mota Varachha, Surat, Gujarat, India",
     phone: "+91 98765 43210",
     mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.3733871972554!2d72.8759749!3d21.256682599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be049006dfa5ea1%3A0xadcaa35dee464c18!2sCygni%20Seasons!5e0!3m2!1sen!2sin!4v1780472895715!5m2!1sen!2sin",
   },
@@ -266,7 +266,7 @@ const projects = {
   "cygni-empire": {
     title: "CYGNI EMPIRE",
     category: "Commercial",
-    location: "Surat",
+    location: "Nana Varachha, Surat",
     status: "Commercial Corporate Park",
     image: empire,
     brochure: "/brochures/cygni-empire.pdf",
@@ -284,7 +284,7 @@ const projects = {
     floorPlans: [
      ef1
     ],
-    address: "Surat, Gujarat, India",
+    address: "Nana Varachha, Surat, Gujarat, India",
     phone: "+91 98765 43210",
     mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.4435529445577!2d72.8806862750368!3d21.21425288048185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f003c4a2fb5%3A0xefeaeff09efe9c2c!2sCygni!5e0!3m2!1sen!2sin!4v1780473120145!5m2!1sen!2sin",
   },
@@ -356,9 +356,9 @@ const ProjectDetails = () => {
 
         <nav className="project-subnav">
           <a href="#overview">Overview</a>
-          <a href="#gallery">Gallery</a>
           <a href="#amenities">Amenities</a>
           <a href="#floorplan">Floor Plan</a>
+          <a href="#gallery">Gallery</a>
           <a href="#location">Location</a>
           <a href="#enquiry">Contact</a>
         </nav>
@@ -398,24 +398,6 @@ const ProjectDetails = () => {
           </div>
         </section>
 
-        <section className="pd-section" id="gallery">
-          <div className="pd-section-heading">
-            <span>PROJECT GALLERY</span>
-            <h2>Explore The Project</h2>
-          </div>
-
-          <div className="pd-gallery">
-            {project.gallery.map((img, index) => (
-              <div className="pd-gallery-card" key={index}>
-                <LazyLoadImage
-                  src={img}
-                  alt={`${project.title} gallery ${index + 1}`}
-                  effect="blur"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
 
         <section className="pd-section pd-dark" id="amenities">
           <div className="pd-section-heading">
@@ -462,6 +444,25 @@ const ProjectDetails = () => {
                 </div>
               );
             })}
+          </div>
+        </section>
+
+        <section className="pd-section" id="gallery">
+          <div className="pd-section-heading">
+            <span>PROJECT GALLERY</span>
+            <h2>Explore The Project</h2>
+          </div>
+
+          <div className="pd-gallery">
+            {project.gallery.map((img, index) => (
+              <div className="pd-gallery-card" key={index}>
+                <LazyLoadImage
+                  src={img}
+                  alt={`${project.title} gallery ${index + 1}`}
+                  effect="blur"
+                />
+              </div>
+            ))}
           </div>
         </section>
 

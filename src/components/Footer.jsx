@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,22 +15,36 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="footer-links">
-          <h3>Explore</h3>
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#projects">Projects</a>
-          <a href="#why">Why Choose Us</a>
-          <a href="#process">Process</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <div className="footer-projects-grid">
+          <div className="footer-project-col">
+            <Link to="/projects/residential" className="footer-project-title">
+              Residential
+            </Link>
 
-        <div className="footer-links">
-          <h3>Projects</h3>
-          <a href="#projects">Residential</a>
-          <a href="#projects">Commercial</a>
-          <a href="#projects">Industrial</a>
+            <Link to="/project/cygni-pride">Cygni pride</Link>
+            <Link to="/project/cygni-seasons">Cygni seasons</Link>
+            <Link to="/project/cygni-villa">Cygni villa</Link>
+            <Link to="/project/cygni-one-bungalows">Cygni one bungalows</Link>
+          </div>
+
+          <div className="footer-project-col">
+            <Link to="/projects/commercial" className="footer-project-title">
+              Commercial
+            </Link>
+
+            <Link to="/project/cygni-empire">Cygni empire</Link>
+          </div>
+
+          <div className="footer-project-col">
+            <Link to="/projects/industrial" className="footer-project-title">
+              Industrial
+            </Link>
+
+            <Link to="/project/cygni-industrial-1-2">
+              Cygni industrial 1-2
+            </Link>
+            <Link to="/project/cygni-industrial-3">Cygni industrial 3</Link>
+          </div>
         </div>
 
         <div className="footer-contact">

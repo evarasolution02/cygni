@@ -16,11 +16,15 @@ import Footer from "./components/Footer";
 import ProjectCategory from "./components/ProjectCategory";
 import ProjectDetails from "./components/ProjectDetails";
 
+
+import FloatingContact from "./components/FloatingContact";
+
 import "./App.css";
 
 const Home = () => {
   return (
     <>
+    <FloatingContact />
       <Navbar />
       <Hero />
       <BrandReveal />

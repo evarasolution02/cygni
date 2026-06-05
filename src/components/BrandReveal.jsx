@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import brandImg from "../assets/brand.webp";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const BrandReveal = () => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const bigTextX = useTransform(scrollYProgress, [0, 1], ["45%", "-12%"]);
+
   return (
-    <section className="cygni-brand" id="about">
+    <section className="cygni-brand" id="about" ref={sectionRef}>
       <div className="cygni-info">
         <span>CYGNI REALTY</span>
 
@@ -27,17 +37,21 @@ const BrandReveal = () => {
       <div className="cygni-image">
         <div className="top-square"></div>
         <div className="bottom-square"></div>
+
         <LazyLoadImage
-  src={brandImg}
-  alt="..."
-  effect="blur"
-/>
+          src={brandImg}
+          alt="Cygni Realty"
+          effect="blur"
+        />
       </div>
 
-      <h1 className="cygni-big">
+      <motion.h1
+        className="cygni-big"
+        style={{ x: bigTextX }}
+      >
         <span>CYGNI</span>
         <strong>REALTY</strong>
-      </h1>
+      </motion.h1>
     </section>
   );
 };
