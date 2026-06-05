@@ -4,6 +4,9 @@
   --dark: #07152f;
   --text: #667085;
   --white: #ffffff;
+
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Montserrat", sans-serif;
 }
 
 /* =========================================
@@ -21,19 +24,88 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   background: #ffffff;
   overflow-x: hidden;
   color: var(--dark);
+  font-weight: 400;
+  letter-spacing: 0.1px;
 }
 
-/* =========================================
-NAVBAR
-========================================= */
 
-/* =========================================
-NAVBAR
-========================================= */
+
+
+h1, h2, h3,
+.hero-content h1,
+.cygni-info h2,
+.projects-heading h2,
+.why-left h2,
+.why-card h3,
+.faq-heading h2,
+.faq-question h3,
+.contact-heading h2,
+.contact-info h3,
+.footer-brand h2,
+.category-heading h1,
+.category-overlay h3,
+.pd-hero-overlay h1,
+.pd-overview-text h2,
+.pd-section-heading h2,
+.pd-location h2,
+.pd-contact h2,
+.brochure-box h2,
+.amenity-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+.nav-menu li,
+.nav-btn,
+.project-tabs button,
+.project-overlay p,
+.project-overlay button,
+.why-tag,
+.faq-heading span,
+.contact-heading span,
+.footer-project-title,
+.footer-contact h3,
+.category-heading span,
+.pd-hero-overlay span,
+.pd-small,
+.pd-section-heading span,
+.pd-contact span,
+.brochure-box span,
+.brochure-btn,
+.contact-form button,
+.pd-contact-form button {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 3.5px;
+}
+
+
+
+p,
+.hero-content p,
+.cygni-info p,
+.why-left p,
+.why-card p,
+.faq-heading p,
+.faq-answer p,
+.contact-heading p,
+.footer-brand p,
+.pd-overview-text p,
+.pd-location p,
+.pd-contact p,
+.brochure-box p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
 /* =========================================
 NAVBAR
 ========================================= */
@@ -455,21 +527,21 @@ brand revel SECTION
 
 .cygni-info h2 {
   margin: 40px 0 18px;
-  font-size: 58px;
+  font-size: 65px;
   line-height: 1.08;
-  font-weight: 300;
-  letter-spacing: 6px;
+  font-weight: 700;
+  letter-spacing: 3px;
   color: #070b18;
   font-family: "Times New Roman", serif;
 }
 
 .cygni-info h2 b {
-  font-weight: 300;
+  font-weight: 700;
   color: #0b6f9c;
 }
 
 .cygni-info .line {
-  width: 170px;
+  width: 220px;
   height: 2px;
   background: #0b86bd;
   margin-bottom: 24px;
@@ -536,20 +608,20 @@ brand revel SECTION
 
 .cygni-big span {
   display: block;
-  font-size: 200px;
-  font-weight: 900;
+  font-size: 190px;
+  font-weight: 800;
   color: #087ca8;
-  letter-spacing: -8px;
+  letter-spacing: 2px;
 }
 
 .cygni-big strong {
   display: block;
-  font-size: 200px;
-  font-weight: 900;
+  font-size: 190px;
+  font-weight: 800;
   color: transparent;
   -webkit-text-stroke: 2px #087ca8;
   margin-left: 20px;
-  letter-spacing: -7px;
+  letter-spacing: 5px;
 }
 
 @media (max-width: 900px) {
@@ -2301,7 +2373,7 @@ overflow-x: visible;
 }
 
 .project-subnav a {
-  color: #07152f;
+  color: #ffffff;
   text-decoration: none;
   font-size: 13px;
   letter-spacing: 3px;
@@ -2396,9 +2468,11 @@ overflow-x: visible;
   background: linear-gradient(135deg, #1d6a87, #2b9ad6);
   color: #ffffff;
   font-weight: 700;
+  font-size: 17px;
   letter-spacing: 4px;
   text-transform: uppercase;
   transition: 0.35s ease;
+  border-radius: 50px;
 }
 
 .brochure-btn:hover,
@@ -3168,3 +3242,13 @@ overflow-x: visible;
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
+
+
+
+
+
+
+
+
+
+
