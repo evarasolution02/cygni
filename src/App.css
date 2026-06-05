@@ -32,10 +32,9 @@ body {
   letter-spacing: 0.1px;
 }
 
-
-
-
-h1, h2, h3,
+h1,
+h2,
+h3,
 .hero-content h1,
 .cygni-info h2,
 .projects-heading h2,
@@ -60,9 +59,6 @@ h1, h2, h3,
   letter-spacing: 0.5px;
 }
 
-
-
-
 .nav-menu li,
 .nav-btn,
 .project-tabs button,
@@ -86,8 +82,6 @@ h1, h2, h3,
   font-weight: 600;
   letter-spacing: 3.5px;
 }
-
-
 
 p,
 .hero-content p,
@@ -179,7 +173,7 @@ MENU
 
   font-size: 15px;
   font-weight: 500;
-
+  letter-spacing: 2px !important;
   transition: all 0.35s ease;
 }
 
@@ -193,11 +187,7 @@ MENU
   width: 0;
   height: 2px;
 
-  background: linear-gradient(
-    90deg,
-    var(--primary),
-    var(--accent)
-  );
+  background: linear-gradient(90deg, var(--primary), var(--accent));
 
   transition: width 0.35s ease;
 }
@@ -232,11 +222,7 @@ BUTTON
   font-weight: 600;
   letter-spacing: 0.3px;
 
-  background: linear-gradient(
-    135deg,
-    var(--primary),
-    var(--accent)
-  );
+  background: linear-gradient(135deg, var(--primary), var(--accent));
 
   transition: all 0.45s ease;
 }
@@ -257,7 +243,7 @@ BUTTON
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(255,255,255,0.45),
+    rgba(255, 255, 255, 0.45),
     transparent
   );
 
@@ -274,8 +260,8 @@ BUTTON
   transform: translateY(-4px);
 
   box-shadow:
-    0 15px 35px rgba(0,0,0,0.12),
-    0 10px 25px rgba(0,0,0,0.08);
+    0 15px 35px rgba(0, 0, 0, 0.12),
+    0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .nav-btn:active {
@@ -317,7 +303,6 @@ MOBILE
 ========================================= */
 
 @media (max-width: 992px) {
-
   .navbar {
     padding: 12px 0;
   }
@@ -357,12 +342,7 @@ MOBILE
     max-width: 340px;
     height: 100vh;
 
-    background:
-      linear-gradient(
-        135deg,
-        var(--primary),
-        #08172f
-      );
+    background: linear-gradient(135deg, var(--primary), #08172f);
 
     flex-direction: column;
 
@@ -375,8 +355,7 @@ MOBILE
 
     z-index: 1001;
 
-    box-shadow:
-      -20px 0 50px rgba(0,0,0,0.25);
+    box-shadow: -20px 0 50px rgba(0, 0, 0, 0.25);
   }
 
   .nav-menu.active {
@@ -396,6 +375,10 @@ MOBILE
     color: #fff;
   }
 }
+
+
+
+
 
 
 
@@ -673,15 +656,6 @@ brand revel SECTION
   }
 }
 
-
-
-
-
-
-
-
-
-
 /* =========================================
 experiance SECTION
 ========================================= */
@@ -794,12 +768,11 @@ experiance SECTION
   color: #d8a152;
 
   border: 1px solid rgba(216, 161, 82, 0.35);
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.08),
-      rgba(255, 255, 255, 0.02)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
 
   box-shadow:
     0 18px 45px rgba(0, 0, 0, 0.18),
@@ -843,7 +816,6 @@ experiance SECTION
   text-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 
   transition: all 0.45s ease;
-  
 }
 
 .luxury-stat:hover h3 {
@@ -857,12 +829,7 @@ experiance SECTION
   width: 65px;
   height: 2px;
 
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #d8a152,
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, #d8a152, transparent);
 
   margin: 24px auto;
 }
@@ -956,12 +923,6 @@ experiance SECTION
     letter-spacing: 3px;
   }
 }
-
-
-
-
-
-
 
 /* =========================================
 project SECTION
@@ -1274,14 +1235,6 @@ project SECTION
   }
 }
 
-
-
-
-
-
-
-
-
 /* =========================================
 why choose us SECTION
 ========================================= */
@@ -1456,14 +1409,6 @@ why choose us SECTION
   }
 }
 
-
-
-
-
-
-
-
-
 /* =========================================
 process SECTION
 ========================================= */
@@ -1481,13 +1426,6 @@ process SECTION
   object-fit: cover;
   display: block;
 }
-
-
-
-
-
-
-
 
 /* =========================================
 FAQ SECTION
@@ -1692,14 +1630,6 @@ FAQ SECTION
   gap: 20px;
 }
 
-
-
-
-
-
-
-
-
 /* =========================================
 contact SECTION
 ========================================= */
@@ -1888,12 +1818,6 @@ contact SECTION
   }
 }
 
-
-
-
-
-
-
 /* =========================================
 footer SECTION
 ========================================= */
@@ -1919,11 +1843,7 @@ FOOTER
       rgba(43, 154, 214, 0.22),
       transparent 35%
     ),
-    linear-gradient(
-      135deg,
-      rgba(7, 21, 47, 1),
-      rgba(29, 106, 135, 0.72)
-    );
+    linear-gradient(135deg, rgba(7, 21, 47, 1), rgba(29, 106, 135, 0.72));
 }
 
 .footer-bg-text {
@@ -2166,11 +2086,7 @@ CATEGORY PAGE
   flex-direction: column;
   justify-content: flex-end;
 
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.85),
-    transparent
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
 }
 
 .category-overlay h3 {
@@ -2287,15 +2203,9 @@ CATEGORY PAGE
   }
 }
 
-
-
-
-
-
-
 .project-page {
   background: #ffffff;
-overflow-x: visible;
+  overflow-x: visible;
 }
 
 /* HERO */
@@ -2317,7 +2227,11 @@ overflow-x: visible;
   inset: 0;
   background:
     linear-gradient(to top, rgba(7, 21, 47, 0.92), rgba(7, 21, 47, 0.18)),
-    radial-gradient(circle at top right, rgba(43, 154, 214, 0.22), transparent 35%);
+    radial-gradient(
+      circle at top right,
+      rgba(43, 154, 214, 0.22),
+      transparent 35%
+    );
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -2393,7 +2307,11 @@ overflow-x: visible;
   gap: 70px;
   align-items: center;
   background:
-    radial-gradient(circle at top left, rgba(43, 154, 214, 0.1), transparent 35%),
+    radial-gradient(
+      circle at top left,
+      rgba(43, 154, 214, 0.1),
+      transparent 35%
+    ),
     #ffffff;
 }
 
@@ -2525,7 +2443,11 @@ overflow-x: visible;
 .pd-dark {
   background:
     linear-gradient(135deg, rgba(7, 21, 47, 0.98), rgba(29, 106, 135, 0.9)),
-    radial-gradient(circle at top right, rgba(216, 161, 82, 0.16), transparent 35%);
+    radial-gradient(
+      circle at top right,
+      rgba(216, 161, 82, 0.16),
+      transparent 35%
+    );
 }
 
 .pd-dark .pd-section-heading h2 {
@@ -2559,7 +2481,11 @@ overflow-x: visible;
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(216, 161, 82, 0.14), transparent 58%);
+  background: linear-gradient(
+    135deg,
+    rgba(216, 161, 82, 0.14),
+    transparent 58%
+  );
   opacity: 0;
   transition: 0.4s ease;
 }
@@ -2756,7 +2682,7 @@ overflow-x: visible;
 
 /* TABLET */
 @media (max-width: 1000px) {
-   .project-subnav {
+  .project-subnav {
     position: sticky;
     top: 95px;
     z-index: 999;
@@ -2895,13 +2821,6 @@ overflow-x: visible;
     padding: 34px 24px;
   }
 }
-
-
-
-
-
-
-
 
 .floating-contact {
   position: fixed;
@@ -3088,7 +3007,6 @@ overflow-x: visible;
   }
 }
 
-
 .support-avatar {
   position: relative;
   width: 58px;
@@ -3122,7 +3040,8 @@ overflow-x: visible;
 }
 
 @keyframes avatarFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
 
@@ -3142,8 +3061,6 @@ overflow-x: visible;
     opacity: 0;
   }
 }
-
-
 
 .contact-option.site-visit {
   border: none;
@@ -3242,13 +3159,3 @@ overflow-x: visible;
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
-
-
-
-
-
-
-
-
-
-
