@@ -11,7 +11,6 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -20,14 +19,12 @@ const Navbar = () => {
 
     if (path.startsWith("#")) {
       navigate("/");
-
       setTimeout(() => {
         document.querySelector(path)?.scrollIntoView({
           behavior: "smooth",
           block: "start",
         });
       }, 100);
-
       return;
     }
 
@@ -44,34 +41,61 @@ const Navbar = () => {
         <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
           <li onClick={() => goTo("#hero")}>Home</li>
           <li onClick={() => goTo("#about")}>About Us</li>
-          <li onClick={() => goTo("/projects/residential")}>Residential</li>
-          <li onClick={() => goTo("/projects/industrial")}>Industrial</li>
-          <li onClick={() => goTo("/projects/commercial")}>Commercial</li>
+
+          <li className="nav-dropdown">
+            <span onClick={() => goTo("/projects/residential")}>
+              Residential
+            </span>
+
+            <div className="nav-dropdown-menu">
+              <p onClick={() => goTo("/project/cygni-pride")}>Cygni Pride</p>
+              <p onClick={() => goTo("/project/cygni-seasons")}>
+                Cygni Seasons
+              </p>
+              <p onClick={() => goTo("/project/cygni-villa")}>Cygni Villa</p>
+              <p onClick={() => goTo("/project/cygni-one-bungalows")}>
+                Cygni One Bungalows
+              </p>
+            </div>
+          </li>
+
+          <li className="nav-dropdown">
+            <span onClick={() => goTo("/projects/industrial")}>Industrial</span>
+
+            <div className="nav-dropdown-menu">
+              <p onClick={() => goTo("/project/cygni-industrial-1-2")}>
+                Cygni Industrial 1-2
+              </p>
+              <p onClick={() => goTo("/project/cygni-industrial-3")}>
+                Cygni Industrial 3
+              </p>
+            </div>
+          </li>
+
+          <li className="nav-dropdown">
+            <span onClick={() => goTo("/projects/commercial")}>Commercial</span>
+
+            <div className="nav-dropdown-menu">
+              <p onClick={() => goTo("/project/cygni-empire")}>Cygni Empire</p>
+            </div>
+          </li>
+
           <li onClick={() => goTo("#process")}>Process</li>
 
           <button
             className="nav-btn mobile-nav-btn"
-            onClick={() => goTo("/#contact")}
+            onClick={() => goTo("#contact")}
           >
             Enquire
           </button>
         </ul>
 
-       <button
-  className="nav-btn desktop-nav-btn"
-  onClick={() => {
-    const contactSection = document.getElementById("contact");
-
-    if (contactSection) {
-      contactSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }}
->
-  Enquire
-</button>
+        <button
+          className="nav-btn desktop-nav-btn"
+          onClick={() => goTo("#contact")}
+        >
+          Enquire
+        </button>
 
         <button
           className="mobile-menu-btn"

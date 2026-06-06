@@ -375,6 +375,125 @@ MOBILE
     color: #fff;
   }
 }
+.nav-dropdown {
+  position: relative;
+  padding: 12px 0;
+}
+
+.nav-dropdown > span {
+  display: block;
+  cursor: pointer;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(14px) scale(0.96);
+
+  min-width: 280px;
+  padding: 14px;
+
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.98), rgba(244,249,252,0.94));
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(184, 137, 59, 0.28);
+  border-radius: 18px;
+
+  box-shadow:
+    0 30px 80px rgba(7, 21, 47, 0.18),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: 0.28s ease;
+  z-index: 2000;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.nav-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: rgba(255,255,255,0.98);
+  border-left: 1px solid rgba(184, 137, 59, 0.25);
+  border-top: 1px solid rgba(184, 137, 59, 0.25);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.nav-dropdown-menu p {
+  position: relative;
+  margin: 0;
+  padding: 15px 18px 15px 42px;
+
+  color: #07152f;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.nav-dropdown-menu p::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #b8893b;
+  transform: translateY(-50%) scale(0.7);
+  opacity: 0.45;
+  transition: 0.3s ease;
+}
+
+.nav-dropdown-menu p:hover {
+  background: rgba(184, 137, 59, 0.11);
+  color: #0b7fa8;
+  transform: translateX(5px);
+}
+
+.nav-dropdown-menu p:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+@media (max-width: 992px) {
+  .nav-dropdown-menu {
+    border-radius: 0;
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+  .nav-dropdown-menu::before {
+    display: none;
+  }
+
+  .nav-dropdown-menu p {
+    padding: 8px 0;
+    color: #fff;
+  }
+
+  .nav-dropdown-menu p::before {
+    display: none;
+  }
+}
 
 
 
@@ -923,6 +1042,16 @@ experiance SECTION
   }
 }
 
+
+
+
+
+
+
+
+
+
+
 /* =========================================
 project SECTION
 ========================================= */
@@ -1007,10 +1136,14 @@ project SECTION
   width: 100%;
   display: flex;
   gap: 40px;
+
   padding: 0 8%;
   overflow-x: auto;
   scrollbar-width: none;
   scroll-behavior: smooth;
+
+  scroll-padding-left: 8%;
+  scroll-snap-type: x mandatory;
 }
 
 .project-grid::-webkit-scrollbar {
@@ -1019,6 +1152,8 @@ project SECTION
 
 /* Card */
 .project-card {
+  flex: 0 0 520px;
+  scroll-snap-align: start;
   position: relative;
   flex: 0 0 520px;
   height: 560px;
@@ -1233,6 +1368,204 @@ project SECTION
     width: 100%;
   }
 }
+.project-slider-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 20;
+
+  width: 58px;
+  height: 58px;
+
+  border: 1px solid rgba(184, 137, 59, 0.35);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  color: #07152f;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 22px 55px rgba(7, 21, 47, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.project-arrow:hover {
+  background: #07152f;
+  color: #d8a152;
+  border-color: rgba(216, 161, 82, 0.65);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.project-arrow-left {
+  left: 22px;
+}
+
+.project-arrow-right {
+  right: 22px;
+}
+
+.project-grid {
+  scroll-snap-type: x mandatory;
+}
+
+.project-card {
+  scroll-snap-align: start;
+}
+
+@media (max-width: 600px) {
+  .premium-projects {
+    padding: 80px 0 90px;
+    background:
+      radial-gradient(circle at top right, rgba(184, 137, 59, 0.12), transparent 36%),
+      linear-gradient(180deg, #ffffff 0%, #f5f9fb 100%);
+  }
+
+  .projects-heading {
+    padding: 0 22px;
+    margin-bottom: 34px;
+  }
+
+  .projects-heading span {
+    color: #b8893b;
+    font-size: 11px;
+    letter-spacing: 4px;
+  }
+
+  .projects-heading h2 {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .project-tabs {
+    gap: 10px;
+    margin-bottom: 36px;
+    padding: 0 16px;
+  }
+
+  .project-tabs button {
+    padding: 11px 16px;
+    border-radius: 40px;
+    background: #ffffff;
+    border: 1px solid rgba(184, 137, 59, 0.22);
+    box-shadow: 0 12px 35px rgba(7, 21, 47, 0.06);
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .project-tabs button.active {
+    background: #07152f;
+    color: #d8a152;
+    border-color: rgba(216, 161, 82, 0.45);
+  }
+
+  .project-tabs button::after {
+    display: none;
+  }
+
+  .project-slider-wrap {
+    overflow: hidden;
+  }
+
+  .project-grid {
+    display: flex;
+    gap: 18px;
+    padding: 0 22px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 22px;
+  }
+
+  .project-card {
+    flex: 0 0 86%;
+    height: 460px;
+    border-radius: 26px;
+    scroll-snap-align: center;
+    box-shadow: 0 28px 70px rgba(7, 21, 47, 0.18);
+  }
+
+  .project-card::after {
+    background: linear-gradient(
+      to top,
+      rgba(7, 21, 47, 0.94),
+      rgba(7, 21, 47, 0.35),
+      transparent
+    );
+  }
+
+  .project-overlay {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .project-overlay h3 {
+    font-size: 33px;
+  }
+
+  .project-overlay p {
+    font-size: 12px;
+    color: #d8a152;
+  }
+
+  .project-overlay a,
+  .project-overlay button {
+    width: 100%;
+  }
+
+  .project-overlay button {
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+  }
+
+  .project-arrow {
+    width: 44px;
+    height: 44px;
+    top: 58%;
+  }
+
+  .project-arrow-left {
+    left: 8px;
+  }
+
+  .project-arrow-right {
+    right: 8px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =========================================
 why choose us SECTION
