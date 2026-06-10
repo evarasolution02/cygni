@@ -724,7 +724,7 @@ brand revel SECTION
   }
 
   .cygni-info h2 {
-    font-size: 42px;
+    font-size: 38px;
   }
 
   .cygni-image {
@@ -1000,7 +1000,7 @@ experiance SECTION
 
   .luxury-stats-wrap {
     flex-direction: column;
-    gap: 52px;
+    gap: 30px;
   }
 
   .luxury-outline {
@@ -1273,77 +1273,7 @@ project SECTION
   }
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .premium-projects {
-    padding: 75px 0;
-  }
 
-  .projects-heading {
-    margin-bottom: 38px;
-  }
-
-  .projects-heading span {
-    font-size: 11px;
-    letter-spacing: 4px;
-  }
-
-  .projects-heading h2 {
-    font-size: 34px;
-  }
-
-  .project-tabs {
-    gap: 18px;
-    margin-bottom: 35px;
-  }
-
-  .project-tabs button {
-    font-size: 12px;
-    letter-spacing: 3px;
-  }
-
-  .project-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 0 18px;
-    overflow: visible;
-  }
-
-  .project-card {
-    flex: unset;
-    width: 100%;
-    height: 430px;
-    border-radius: 24px;
-  }
-
-  .project-overlay {
-    left: 24px;
-    right: 24px;
-    bottom: 26px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-  }
-
-  .project-overlay h3 {
-    font-size: 30px;
-  }
-
-  .project-overlay p {
-    font-size: 12px;
-    letter-spacing: 3px;
-  }
-
-  .project-overlay button {
-    width: 100%;
-    padding: 14px 18px;
-  }
-
-  .project-overlay a {
-    width: 100%;
-  }
-}
 .project-slider-wrap {
   position: relative;
   width: 100%;
@@ -1472,7 +1402,7 @@ project SECTION
 
   .project-card {
     flex: 0 0 86%;
-    height: 460px;
+    height: 380px;
     border-radius: 26px;
     scroll-snap-align: center;
     box-shadow: 0 28px 70px rgba(7, 21, 47, 0.18);
@@ -1497,7 +1427,7 @@ project SECTION
   }
 
   .project-overlay h3 {
-    font-size: 33px;
+    font-size: 18px;
   }
 
   .project-overlay p {
@@ -1696,7 +1626,21 @@ why choose us SECTION
   .why-tag {
     letter-spacing: 4px;
   }
+  .why-left h2{
+    font-size: 38px;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* =========================================
 PREMIUM PROCESS IMAGE SECTION
@@ -1867,11 +1811,12 @@ PREMIUM PROCESS IMAGE SECTION
   }
 
   .process-premium-content h2 {
-    font-size: 42px;
+    font-size: 38px;
   }
 
   .process-points {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   .process-points div {
@@ -1881,7 +1826,8 @@ PREMIUM PROCESS IMAGE SECTION
 
 @media (max-width: 480px) {
   .process-points {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+     gap: 16px;
   }
 }
 
@@ -2036,12 +1982,16 @@ FAQ SECTION
   }
 
   .faq-question h3 {
-    font-size: 23px;
+    font-size: 14px;
   }
 
   .faq-question span {
     min-width: 36px;
     height: 36px;
+  }
+
+  .faq-heading h2{
+    font-size: 38px !important;
   }
 }
 
@@ -2268,6 +2218,10 @@ contact SECTION
   .contact-info,
   .contact-form {
     padding: 30px 24px;
+  }
+
+  .contact-heading h2{
+    font-size: 40px;
   }
 }
 
