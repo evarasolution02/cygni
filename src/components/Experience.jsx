@@ -65,7 +65,6 @@ function Experience() {
     <section
       className={`luxury-stats ${startCounter ? "animate-stats" : ""}`}
       ref={sectionRef}
-      id="about"
     >
       <img
         src={blueprint}

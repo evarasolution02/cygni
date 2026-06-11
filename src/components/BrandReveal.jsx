@@ -14,7 +14,7 @@ const BrandReveal = () => {
   const bigTextX = useTransform(scrollYProgress, [0, 1], ["45%", "-12%"]);
 
   return (
-    <section className="cygni-brand" id="about" ref={sectionRef}>
+    <section className="cygni-brand"  ref={sectionRef}>
       <div className="cygni-info">
         <span>CYGNI REALTY</span>
 

@@ -40,7 +40,6 @@ const Navbar = () => {
 
         <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
           <li onClick={() => goTo("#hero")}>Home</li>
-          <li onClick={() => goTo("#about")}>About Us</li>
 
           <li className="nav-dropdown">
             <span onClick={() => goTo("/projects/residential")}>
@@ -80,7 +79,7 @@ const Navbar = () => {
             </div>
           </li>
 
-          <li onClick={() => goTo("#process")}>Process</li>
+          <li onClick={() => goTo("#about")}>About Us</li>
 
           <button
             className="nav-btn mobile-nav-btn"
