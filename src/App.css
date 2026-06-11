@@ -679,37 +679,34 @@ brand revel SECTION
 .cygni-big {
   position: absolute;
   left: 0;
-  bottom: 45px;
+  bottom: 5px;
   z-index: 20;
 
-  margin: 0;
-
   display: flex;
-  align-items: flex-end;
+  align-items: center; /* flex-end ને center કર */
+  gap: 20px;
 
   white-space: nowrap;
-  line-height: 0.78;
-
   pointer-events: none;
-  will-change: transform;
+}
+
+.cygni-big span,
+.cygni-big strong {
+  font-family: "League Spartan", sans-serif;
+  font-size: 230px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 4px;
 }
 
 .cygni-big span {
-  display: block;
-  font-size: 190px;
-  font-weight: 800;
   color: #087ca8;
-  letter-spacing: 2px;
 }
 
 .cygni-big strong {
-  display: block;
-  font-size: 190px;
-  font-weight: 800;
   color: transparent;
   -webkit-text-stroke: 2px #087ca8;
-  margin-left: 20px;
-  letter-spacing: 5px;
+  margin-left: 0;
 }
 
 @media (max-width: 900px) {
