@@ -1,5 +1,5 @@
 import React from "react";
-import heroImg from "../assets/process.png";
+import heroVideo from "../assets/hero.mp4";
 
 const Hero = () => {
   const scrollDown = () => {
@@ -11,10 +11,13 @@ const Hero = () => {
 
   return (
     <section className="hero" id="hero">
-      <img
-        src={heroImg}
-        alt="Cygni Realty"
-        className="hero-image"
+      <video
+        className="hero-video"
+        src={heroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
       />
 
       <div className="hero-overlay"></div>
