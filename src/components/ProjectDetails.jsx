@@ -5,9 +5,9 @@ import Footer from "./Footer";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-import pride from "../assets/pride.webp";
-import seasons from "../assets/seasons.webp";
-import villa from "../assets/villa.webp";
+import pride from "../assets/cygni-pride/4.jpeg";
+import seasons from "../assets/cygni-seasons/4.jpg";
+import villa from "../assets/Cygni-villa/10.jpeg";
 import oneBungalows from "../assets/one-bungalows.webp";
 import industrialOne from "../assets/industrial-1-2.webp";
 import industrialThree from "../assets/industrial-3.webp";

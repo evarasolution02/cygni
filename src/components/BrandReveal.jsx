@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import brandImg from "../assets/brand.webp";
+import brandImg from "../assets/pride.webp";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion, useScroll, useTransform } from "framer-motion";
 

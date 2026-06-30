@@ -1,5 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaYoutube,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -13,6 +19,39 @@ const Footer = () => {
             Premium real estate solutions for residential, commercial, and
             industrial properties with trust, transparency, and luxury service.
           </p>
+          <div className="footer-social">
+            <a
+              href="https://www.instagram.com/cygni_realty?igsh=Nnpja3N5OTNqN2hi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+
+            <a
+              href="https://www.facebook.com/share/18gwP91Z7B/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+
+            <a
+              href="https://youtube.com/@cygnirealty?si=laS2bubFPm3j5By1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube />
+            </a>
+
+            <a
+              href="https://wa.me/919429426622"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp />
+            </a>
+          </div>
         </div>
 
         <div className="footer-projects-grid">
@@ -40,9 +79,7 @@ const Footer = () => {
               Industrial
             </Link>
 
-            <Link to="/project/cygni-industrial-1-2">
-              Cygni industrial 1-2
-            </Link>
+            <Link to="/project/cygni-industrial-1-2">Cygni industrial 1-2</Link>
             <Link to="/project/cygni-industrial-3">Cygni industrial 3</Link>
           </div>
         </div>
@@ -50,7 +87,7 @@ const Footer = () => {
         <div className="footer-contact">
           <h3>Contact</h3>
           <p>Surat, Gujarat, India</p>
-          <p>+91 94294 27711</p>
+          <p>+91 942 942 6622</p>
           <p>cygnirealty@gmail.com</p>
         </div>
       </div>

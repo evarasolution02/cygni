@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import blueprint from "../assets/blueprint.png";
 
 const stats = [
-  { icon: "ri-building-line", number: 120, suffix: "+", name: "Projects Completed" },
+  { icon: "ri-building-line", number: 8, suffix: "+", name: "Projects Completed" },
   { icon: "ri-group-line", number: 500, suffix: "+", name: "Happy Clients" },
-  { icon: "ri-medal-line", number: 15, suffix: "+", name: "Years Experience" },
+  { icon: "ri-medal-line", number: 5, suffix: "+", name: "Years Experience" },
 ];
 
 function Counter({ end, suffix, start }) {
