@@ -544,6 +544,47 @@ MOBILE
   }
 }
 
+/* Default: hero video ઉપર white text + light glow */
+.nav-menu li,
+.nav-dropdown > span {
+  color: #fff;
+}
+
+.nav-menu li::before,
+.nav-dropdown > span::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  right: -14px;
+  top: -10px;
+  bottom: -10px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(7, 21, 47, 0.45) 0%,
+    rgba(7, 21, 47, 0.22) 55%,
+    transparent 100%
+  );
+  filter: blur(12px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Scroll પછી: પહેલા જેવું dark text, glow remove */
+.navbar.scrolled .nav-menu li,
+.navbar.scrolled .nav-dropdown > span {
+  color: var(--dark);
+  text-shadow: none;
+}
+
+.navbar.scrolled .nav-menu li::before,
+.navbar.scrolled .nav-dropdown > span::before {
+  display: none;
+}
+
+.navbar.scrolled .nav-menu li:hover {
+  color: var(--primary);
+}
+
 /* =========================================
 HERO SECTION
 ========================================= */
