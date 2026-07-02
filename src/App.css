@@ -3130,7 +3130,7 @@ CATEGORY PAGE
   }
 
   .project-subnav {
-    top: 72px;
+    top: 100px;
     gap: 22px;
     padding: 14px 18px;
   }
@@ -3535,4 +3535,26 @@ CATEGORY PAGE
 .visit-submit:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+
+
+
+@media (max-width: 992px) {
+  .navbar {
+    z-index: 9999;
+  }
+
+  .nav-menu {
+    z-index: 10000;
+  }
+
+  .mobile-menu-btn {
+    z-index: 10001;
+  }
+
+  .project-subnav {
+    z-index: 10;
+  }
 }
