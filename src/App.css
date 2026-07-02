@@ -585,6 +585,69 @@ MOBILE
   color: var(--primary);
 }
 
+
+
+
+
+
+@media (max-width: 992px) {
+  .nav-menu {
+    justify-content: flex-start;
+    padding-top: 130px;
+    gap: 22px;
+    overflow-y: auto;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav-dropdown > span {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    width: 85%;
+    min-width: unset;
+    margin: 0 auto 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 18px;
+    padding: 14px 18px;
+    box-shadow: none;
+  }
+
+  .nav-dropdown:hover .nav-dropdown-menu {
+    transform: none;
+  }
+
+  .nav-dropdown-menu p {
+    padding: 8px 0;
+    text-align: center;
+    white-space: normal;
+    font-size: 15px;
+    line-height: 1.3;
+    color: #fff;
+  }
+
+  .nav-dropdown-menu p:hover {
+    transform: none;
+  }
+}
 /* =========================================
 HERO SECTION
 ========================================= */
