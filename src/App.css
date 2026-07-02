@@ -591,60 +591,28 @@ MOBILE
 
 
 @media (max-width: 992px) {
-  .nav-menu {
-    justify-content: flex-start;
-    padding-top: 130px;
-    gap: 22px;
-    overflow-y: auto;
-  }
-
-  .nav-dropdown {
-    width: 100%;
-    padding: 0;
-    text-align: center;
-  }
-
-  .nav-dropdown > span {
-    display: inline-block;
-    margin-bottom: 10px;
-  }
-
   .nav-dropdown-menu {
+    display: none;
     position: static;
     transform: none;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 
-    width: 85%;
-    min-width: unset;
-    margin: 0 auto 12px;
+    width: 100%;
+    margin-top: 12px;
+    padding: 15px;
+    border-radius: 15px;
 
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+  }
 
-    background: rgba(255, 255, 255, 0.08);
-    border: none;
-    border-radius: 18px;
-    padding: 14px 18px;
-    box-shadow: none;
+  .nav-dropdown.open .nav-dropdown-menu {
+    display: block;
   }
 
   .nav-dropdown:hover .nav-dropdown-menu {
-    transform: none;
-  }
-
-  .nav-dropdown-menu p {
-    padding: 8px 0;
-    text-align: center;
-    white-space: normal;
-    font-size: 15px;
-    line-height: 1.3;
-    color: #fff;
-  }
-
-  .nav-dropdown-menu p:hover {
     transform: none;
   }
 }
@@ -2681,7 +2649,7 @@ CATEGORY PAGE
 .project-subnav {
   position: sticky;
   top: 86px;
-  z-index: 999;
+  z-index: 99;
   display: flex;
   justify-content: center;
   gap: 38px;

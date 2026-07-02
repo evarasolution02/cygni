@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/logo.png";
 
+const [openDropdown, setOpenDropdown] = useState(null);
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,6 +18,7 @@ const Navbar = () => {
 
   const goTo = (path) => {
     setMenuOpen(false);
+    setOpenDropdown(null);
 
     if (path.startsWith("#")) {
       navigate("/");
@@ -41,8 +44,20 @@ const Navbar = () => {
         <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
           <li onClick={() => goTo("#hero")}>Home</li>
 
-          <li className="nav-dropdown">
-            <span onClick={() => goTo("/projects/residential")}>
+          <li
+            className={`nav-dropdown ${openDropdown === "residential" ? "open" : ""}`}
+          >
+            <span
+              onClick={() => {
+                if (window.innerWidth <= 992) {
+                  setOpenDropdown(
+                    openDropdown === "residential" ? null : "residential",
+                  );
+                } else {
+                  goTo("/projects/residential");
+                }
+              }}
+            >
               Residential
             </span>
 
@@ -58,8 +73,22 @@ const Navbar = () => {
             </div>
           </li>
 
-          <li className="nav-dropdown">
-            <span onClick={() => goTo("/projects/industrial")}>Industrial</span>
+          <li
+            className={`nav-dropdown ${openDropdown === "industrial" ? "open" : ""}`}
+          >
+            <span
+              onClick={() => {
+                if (window.innerWidth <= 992) {
+                  setOpenDropdown(
+                    openDropdown === "industrial" ? null : "industrial",
+                  );
+                } else {
+                  goTo("/projects/industrial");
+                }
+              }}
+            >
+              Industrial
+            </span>
 
             <div className="nav-dropdown-menu">
               <p onClick={() => goTo("/project/cygni-industrial-1-2")}>
@@ -70,9 +99,22 @@ const Navbar = () => {
               </p>
             </div>
           </li>
-
-          <li className="nav-dropdown">
-            <span onClick={() => goTo("/projects/commercial")}>Commercial</span>
+          <li
+            className={`nav-dropdown ${openDropdown === "commercial" ? "open" : ""}`}
+          >
+            <span
+              onClick={() => {
+                if (window.innerWidth <= 992) {
+                  setOpenDropdown(
+                    openDropdown === "commercial" ? null : "commercial",
+                  );
+                } else {
+                  goTo("/projects/commercial");
+                }
+              }}
+            >
+              Commercial
+            </span>
 
             <div className="nav-dropdown-menu">
               <p onClick={() => goTo("/project/cygni-empire")}>Cygni Empire</p>
