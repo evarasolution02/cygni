@@ -13,6 +13,7 @@ import industrialOne from "../assets/industrial-1-2.webp";
 import industrialThree from "../assets/industrial-3.webp";
 import empire from "../assets/empire.webp";
 
+import p11 from "../assets/cygni-pride/001.jpeg";
 import p1 from "../assets/cygni-pride/5.jpeg";
 import p2 from "../assets/cygni-pride/9.jpeg";
 import p3 from "../assets/cygni-pride/3.jpeg";
@@ -22,6 +23,7 @@ import p6 from "../assets/cygni-pride/10.jpeg";
 import f1 from "../assets/cygni-pride/f1.jpeg";
 import f2 from "../assets/cygni-pride/f2.jpeg";
 
+import s11 from "../assets/cygni-seasons/cam.jpg";
 import s1 from "../assets/cygni-seasons/4.jpg";
 import s2 from "../assets/cygni-seasons/5.jpg";
 import s3 from "../assets/cygni-seasons/6.jpg";
@@ -30,6 +32,7 @@ import s5 from "../assets/cygni-seasons/8.jpg";
 import s6 from "../assets/cygni-seasons/9.jpg";
 import sf1 from "../assets/cygni-seasons/f1.jpg";
 
+import v11 from "../assets/Cygni-villa/1.JPEG";
 import v1 from "../assets/Cygni-villa/2.JPEG";
 import v2 from "../assets/Cygni-villa/3.JPEG";
 import v3 from "../assets/Cygni-villa/4.JPEG";
@@ -39,7 +42,6 @@ import v6 from "../assets/Cygni-villa/11.JPEG";
 import vf1 from "../assets/Cygni-villa/5.jpeg";
 import vf2 from "../assets/Cygni-villa/6.jpeg";
 import vf3 from "../assets/Cygni-villa/12.jpeg";
-
 
 import if1 from "../assets/i1.png";
 import if2 from "../assets/i2.png";
@@ -84,6 +86,7 @@ const projects = {
     location: "Mota Varachha, Surat",
     status: "Premium Residential Project",
     image: pride,
+    overviewImage: p11,
     brochure: "/brochures/cygni-pride.pdf",
     description:
       "CYGNI PRIDE is crafted for families who desire elegance, exclusivity, and elevated urban living. With thoughtfully planned 3 BHK residences, iconic 5 BHK penthouses, basement parking, and a 14-storey residential tower, the project brings premium comfort to a refined address.",
@@ -123,6 +126,7 @@ const projects = {
     location: "Mota Varachha, Surat",
     status: "Premium Residential & Retail Project",
     image: seasons,
+    overviewImage: s11,
     brochure: "/brochures/cygni-seasons.pdf",
     description:
       "CYGNI SEASONS redefines Surat’s skyline with elegant 3 BHK residences, premium retail spaces, and a refined lifestyle campus. Designed for families who seek comfort, convenience, and class, the project blends residential calm with high-street commercial energy.",
@@ -145,7 +149,8 @@ const projects = {
     floorPlans: [sf1],
     address: "Mota Varachha, Surat, Gujarat, India",
     phone: "+91 98765 43210",
-    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.3733871972554!2d72.8759749!3d21.256682599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be049006dfa5ea1%3A0xadcaa35dee464c18!2sCygni%20Seasons!5e0!3m2!1sen!2sin!4v1780472895715!5m2!1sen!2sin",
+    mapLink:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.3733871972554!2d72.8759749!3d21.256682599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be049006dfa5ea1%3A0xadcaa35dee464c18!2sCygni%20Seasons!5e0!3m2!1sen!2sin!4v1780472895715!5m2!1sen!2sin",
   },
 
   "cygni-villa": {
@@ -154,6 +159,7 @@ const projects = {
     location: "Dandi Road, Surat",
     status: "Luxury Villa Project",
     image: villa,
+    overviewImage: v11,
     brochure: "/brochures/cygni-villa.pdf",
     description:
       "CYGNI VILLA is an exclusive villa community on scenic Dandi Road, designed for those who desire privacy, space, and luxury. The project offers spacious 3–4 bedroom villas with curated lifestyle amenities, landscaped spaces, and premium connectivity.",
@@ -183,12 +189,13 @@ const projects = {
     address:
       "Opp. Fountainhead School, Vanakala Canal, Dandi Road, Surat - 394540",
     phone: "+91 94294 27711",
-    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.6340085527677!2d72.75957417503768!3d21.246356980458025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04b007acaf67b%3A0xd631aa5cf4394a2e!2sCygni%20Villa!5e0!3m2!1sen!2sin!4v1780472967094!5m2!1sen!2sin",
+    mapLink:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.6340085527677!2d72.75957417503768!3d21.246356980458025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04b007acaf67b%3A0xd631aa5cf4394a2e!2sCygni%20Villa!5e0!3m2!1sen!2sin!4v1780472967094!5m2!1sen!2sin",
   },
 
   "cygni-one-bungalows": {
     title: "CYGNI ONE BUNGALOWS",
-    category: "Residential",
+    category: "Bangalows",
     location: "Surat",
     status: "Premium Bungalow Project",
     image: oneBungalows,
@@ -230,12 +237,11 @@ const projects = {
       { title: "Street Light Network", icon: Lamp },
       { title: "Underground Drainage Line", icon: Workflow },
     ],
-    floorPlans: [
-      if1
-    ],
+    floorPlans: [if1],
     address: "Olpad - Sayan Main Road, Surat, Gujarat, India",
     phone: "+91 97271 27000",
-    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.8251060962352!2d72.75215837503984!3d21.31792598040474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04b001749a339%3A0x8f418dd6f61c6b97!2sCygni%20Industrial!5e0!3m2!1sen!2sin!4v1780473028363!5m2!1sen!2sin",
+    mapLink:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.8251060962352!2d72.75215837503984!3d21.31792598040474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04b001749a339%3A0x8f418dd6f61c6b97!2sCygni%20Industrial!5e0!3m2!1sen!2sin!4v1780473028363!5m2!1sen!2sin",
   },
 
   "cygni-industrial-3": {
@@ -256,11 +262,11 @@ const projects = {
       { title: "Street Light Network", icon: Lamp },
       { title: "Underground Drainage Line", icon: Workflow },
     ],
-    floorPlans: [ if2
-    ],
+    floorPlans: [if2],
     address: "Olpad - Sayan Main Road, Surat, Gujarat, India",
     phone: "+91 97271 27000",
-    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.5623034914884!2d72.7625021750402!3d21.328304680396926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04b00043be8d5%3A0x514f0162d123b3ec!2sCygni%20industrial%203!5e0!3m2!1sen!2sin!4v1780473064476!5m2!1sen!2sin",
+    mapLink:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.5623034914884!2d72.7625021750402!3d21.328304680396926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04b00043be8d5%3A0x514f0162d123b3ec!2sCygni%20industrial%203!5e0!3m2!1sen!2sin!4v1780473064476!5m2!1sen!2sin",
   },
 
   "cygni-empire": {
@@ -281,12 +287,11 @@ const projects = {
       { title: "High-Speed Lifts", icon: ArrowUpDown },
       { title: "Reception Area", icon: Armchair },
     ],
-    floorPlans: [
-     ef1
-    ],
+    floorPlans: [ef1],
     address: "Nana Varachha, Surat, Gujarat, India",
     phone: "+91 98765 43210",
-    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.4435529445577!2d72.8806862750368!3d21.21425288048185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f003c4a2fb5%3A0xefeaeff09efe9c2c!2sCygni!5e0!3m2!1sen!2sin!4v1780473120145!5m2!1sen!2sin",
+    mapLink:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.4435529445577!2d72.8806862750368!3d21.21425288048185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f003c4a2fb5%3A0xefeaeff09efe9c2c!2sCygni!5e0!3m2!1sen!2sin!4v1780473120145!5m2!1sen!2sin",
   },
 };
 
@@ -295,15 +300,13 @@ const ProjectDetails = () => {
   const project = projects[slug];
 
   useEffect(() => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "instant",
-  });
-}, [slug]);
+    window.scrollTo(0, 0);
+    setShowAllAmenities(false);
+  }, [slug]);
 
   const [showForm, setShowForm] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
+  const [showAllAmenities, setShowAllAmenities] = useState(false);
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -348,9 +351,7 @@ const ProjectDetails = () => {
           <div className="pd-hero-overlay">
             <span>{project.category}</span>
             <h1>{project.title}</h1>
-            <p>
-              • {project.location}
-            </p>
+            <p>• {project.location}</p>
           </div>
         </section>
 
@@ -390,14 +391,13 @@ const ProjectDetails = () => {
           </div>
 
           <div className="pd-overview-image">
-            <LazyLoadImage
-              src={project.image}
-              alt={project.title}
-              effect="blur"
-            />
+           <LazyLoadImage
+  src={project.overviewImage || project.image}
+  alt={`${project.title} overview`}
+  effect="blur"
+/>
           </div>
         </section>
-
 
         <section className="pd-section pd-dark" id="amenities">
           <div className="pd-section-heading">
@@ -406,18 +406,31 @@ const ProjectDetails = () => {
           </div>
 
           <div className="amenities-grid">
-            {project.amenities.map((item, index) => {
+            {(showAllAmenities
+              ? project.amenities
+              : project.amenities.slice(0, 8)
+            ).map((item, index) => {
               const isObject = typeof item === "object";
 
               return (
                 <div className="amenity-card" key={index}>
                   {isObject && item.icon && <item.icon size={40} />}
-
                   <h3>{isObject ? item.title : item}</h3>
                 </div>
               );
             })}
           </div>
+
+          {project.amenities.length > 8 && (
+            <div className="amenities-view-wrap">
+              <button
+                className="amenities-view-btn"
+                onClick={() => setShowAllAmenities(!showAllAmenities)}
+              >
+                {showAllAmenities ? "View Less" : "View More"}
+              </button>
+            </div>
+          )}
         </section>
 
         <section className="pd-section" id="floorplan">

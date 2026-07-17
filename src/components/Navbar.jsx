@@ -122,7 +122,7 @@ const Navbar = () => {
             </div>
           </li>
 
-          <li onClick={() => goTo("#about")}>About Us</li>
+          <li onClick={() => goTo("/about")}>About Us</li>
 
           <button
             className="nav-btn mobile-nav-btn"

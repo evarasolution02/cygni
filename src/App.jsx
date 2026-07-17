@@ -18,6 +18,7 @@ import ProjectDetails from "./components/ProjectDetails";
 
 
 import FloatingContact from "./components/FloatingContact";
+import About from "./components/About";
 
 import "./App.css";
 
@@ -47,6 +48,7 @@ const App = () => {
 
         <Route path="/projects/:category" element={<ProjectCategory />} />
         <Route path="/project/:slug" element={<ProjectDetails />} />
+         <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
