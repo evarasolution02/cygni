@@ -23,7 +23,7 @@ import p6 from "../assets/cygni-pride/10.jpeg";
 import f1 from "../assets/cygni-pride/f1.jpeg";
 import f2 from "../assets/cygni-pride/f2.jpeg";
 
-import s11 from "../assets/cygni-seasons/cam.jpg";
+import s11 from "../assets/cygni-seasons/Cam.jpg";
 import s1 from "../assets/cygni-seasons/4.jpg";
 import s2 from "../assets/cygni-seasons/5.jpg";
 import s3 from "../assets/cygni-seasons/6.jpg";
