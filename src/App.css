@@ -4752,3 +4752,67 @@ CATEGORY PAGE
     opacity: 0.65;
   }
 }
+
+
+@media (max-width: 768px) {
+  .luxury-stats-wrap {
+    display: flex;
+    flex-direction: row;   /* column નહીં */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .luxury-stat {
+    flex: 1;
+    padding: 10px 5px;
+  }
+
+  .luxury-stat i {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .luxury-stat h3 {
+    font-size: 34px;
+  }
+
+  .luxury-stat p {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .why-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .why-card {
+    padding: 24px 18px;
+  }
+
+  .why-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 18px;
+  }
+
+  .why-card h3 {
+    font-size: 18px;
+  }
+
+  .why-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}

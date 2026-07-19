@@ -299,19 +299,35 @@ const ProjectDetails = () => {
   const { slug } = useParams();
   const project = projects[slug];
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    setShowAllAmenities(false);
-  }, [slug]);
-
   const [showForm, setShowForm] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [showAllAmenities, setShowAllAmenities] = useState(false);
+
+  // Mobile check
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
   const [form, setForm] = useState({
     name: "",
     phone: "",
     email: "",
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setShowAllAmenities(false);
+  }, [slug]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   if (!project) {
     return (
@@ -406,31 +422,31 @@ const ProjectDetails = () => {
           </div>
 
           <div className="amenities-grid">
-            {(showAllAmenities
-              ? project.amenities
-              : project.amenities.slice(0, 8)
-            ).map((item, index) => {
-              const isObject = typeof item === "object";
+  {(showAllAmenities
+    ? project.amenities
+    : project.amenities.slice(0, isMobile ? 4 : 8)
+  ).map((item, index) => {
+    const isObject = typeof item === "object";
 
-              return (
-                <div className="amenity-card" key={index}>
-                  {isObject && item.icon && <item.icon size={40} />}
-                  <h3>{isObject ? item.title : item}</h3>
-                </div>
-              );
-            })}
-          </div>
+    return (
+      <div className="amenity-card" key={index}>
+        {isObject && item.icon && <item.icon size={40} />}
+        <h3>{isObject ? item.title : item}</h3>
+      </div>
+    );
+  })}
+</div>
 
-          {project.amenities.length > 8 && (
-            <div className="amenities-view-wrap">
-              <button
-                className="amenities-view-btn"
-                onClick={() => setShowAllAmenities(!showAllAmenities)}
-              >
-                {showAllAmenities ? "View Less" : "View More"}
-              </button>
-            </div>
-          )}
+          {project.amenities.length > (isMobile ? 4 : 8) && (
+  <div className="amenities-view-wrap">
+    <button
+      className="amenities-view-btn"
+      onClick={() => setShowAllAmenities(!showAllAmenities)}
+    >
+      {showAllAmenities ? "View Less" : "View More"}
+    </button>
+  </div>
+)}
         </section>
 
         <section className="pd-section" id="floorplan">
