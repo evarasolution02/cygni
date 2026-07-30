@@ -1,32 +1,29 @@
 import React from "react";
 import heroVideo from "../assets/hero.mp4";
+import heroMobile from "../assets/hero-mobile.jpeg";
 
 const Hero = () => {
-  const scrollDown = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
-  };
-
   return (
-    <section className="hero" id="hero">
+    <section className="hero">
+
       <video
-        className="hero-video"
-        src={heroVideo}
+        className="hero-video desktop-video"
         autoPlay
         muted
         loop
         playsInline
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+
+      <img
+        src={heroMobile}
+        alt="Hero"
+        className="hero-image mobile-image"
       />
 
       <div className="hero-overlay"></div>
 
-      <div className="scroll-indicator" onClick={scrollDown}>
-        <div className="mouse">
-          <div className="dot"></div>
-        </div>
-      </div>
     </section>
   );
 };

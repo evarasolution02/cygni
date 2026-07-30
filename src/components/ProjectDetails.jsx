@@ -8,7 +8,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import pride from "../assets/cygni-pride/4.jpeg";
 import seasons from "../assets/cygni-seasons/4.jpg";
 import villa from "../assets/Cygni-villa/10.jpeg";
-import oneBungalows from "../assets/one-bungalows.webp";
+import oneBungalows from "../assets/one-bungalows.jpeg";
 import industrialOne from "../assets/industrial-1-2.webp";
 import industrialThree from "../assets/industrial-3.webp";
 import empire from "../assets/empire.webp";
@@ -342,19 +342,28 @@ const ProjectDetails = () => {
     );
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+ const handleSubmit = (e) => {
+  e.preventDefault();
 
+  setShowForm(false);
+
+  if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    window.open(project.brochure, "_blank");
+  } else {
     const link = document.createElement("a");
     link.href = project.brochure;
     link.download = `${project.title}-brochure.pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  }
 
-    setShowForm(false);
-    setForm({ name: "", phone: "", email: "" });
-  };
+  setForm({
+    name: "",
+    phone: "",
+    email: "",
+  });
+};
 
   return (
     <>
@@ -407,11 +416,11 @@ const ProjectDetails = () => {
           </div>
 
           <div className="pd-overview-image">
-           <LazyLoadImage
-  src={project.overviewImage || project.image}
-  alt={`${project.title} overview`}
-  effect="blur"
-/>
+            <LazyLoadImage
+              src={project.overviewImage || project.image}
+              alt={`${project.title} overview`}
+              effect="blur"
+            />
           </div>
         </section>
 
@@ -422,31 +431,31 @@ const ProjectDetails = () => {
           </div>
 
           <div className="amenities-grid">
-  {(showAllAmenities
-    ? project.amenities
-    : project.amenities.slice(0, isMobile ? 4 : 8)
-  ).map((item, index) => {
-    const isObject = typeof item === "object";
+            {(showAllAmenities
+              ? project.amenities
+              : project.amenities.slice(0, isMobile ? 4 : 8)
+            ).map((item, index) => {
+              const isObject = typeof item === "object";
 
-    return (
-      <div className="amenity-card" key={index}>
-        {isObject && item.icon && <item.icon size={40} />}
-        <h3>{isObject ? item.title : item}</h3>
-      </div>
-    );
-  })}
-</div>
+              return (
+                <div className="amenity-card" key={index}>
+                  {isObject && item.icon && <item.icon size={40} />}
+                  <h3>{isObject ? item.title : item}</h3>
+                </div>
+              );
+            })}
+          </div>
 
           {project.amenities.length > (isMobile ? 4 : 8) && (
-  <div className="amenities-view-wrap">
-    <button
-      className="amenities-view-btn"
-      onClick={() => setShowAllAmenities(!showAllAmenities)}
-    >
-      {showAllAmenities ? "View Less" : "View More"}
-    </button>
-  </div>
-)}
+            <div className="amenities-view-wrap">
+              <button
+                className="amenities-view-btn"
+                onClick={() => setShowAllAmenities(!showAllAmenities)}
+              >
+                {showAllAmenities ? "View Less" : "View More"}
+              </button>
+            </div>
+          )}
         </section>
 
         <section className="pd-section" id="floorplan">

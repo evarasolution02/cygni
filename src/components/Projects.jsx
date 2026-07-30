@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import pride from "../assets/pride.webp";
 import seasons from "../assets/seasons.webp";
 import villa from "../assets/villa.webp";
-import oneBungalows from "../assets/one-bungalows.webp";
+import oneBungalows from "../assets/one-bungalows.jpeg";
 import industrialOne from "../assets/industrial-1-2.webp";
 import industrialThree from "../assets/industrial-3.webp";
 import empire from "../assets/empire.webp";
